@@ -87,26 +87,6 @@ body {
 }
 
 /* Botão de Chamada para Ação (CTA) */
-.btn-inscreva {
-    display: block; /* Ocupa a largura total */
-    width: fit-content; /* Largura se ajusta ao conteúdo */
-    margin: 30px auto 0; /* Centraliza o botão */
-    background-color: #6a0572; /* Roxo principal */
-    color: #ffffff; /* Texto branco */
-    padding: 15px 30px;
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 30px; /* Botão arredondado */
-    font-size: 1.2em;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Animação suave */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.btn-inscreva:hover {
-    background-color: #884EA0; /* Roxo mais claro ao passar o mouse */
-    transform: translateY(-3px); /* Pequeno efeito de elevação */
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-}
 
 /* Estilos Responsivos (para telas menores) */
 @media (max-width: 768px) {
@@ -154,4 +134,25 @@ body {
         font-size: 1.1em;
         margin-right: 8px;
     }
+}
+/* Estilo para o texto "FitQueen" */
+.site-title {
+    font-family: 'Great Vibes', cursive; /* Fonte feminina */
+    font-size: 3.5em; /* Tamanho da fonte */
+    color: #8e44ad; /* Cor roxa */
+    margin: 0; /* Remove margens padrão do h1 */
+    padding-left: 20px; /* Alinha com a logo se ela estiver no canto */
+    text-align: left; /* Garante que o texto fique à esquerda */
+    position: absolute; /* Posição absoluta para ficar no canto superior esquerdo */
+    top: 15px; /* Distância do topo */
+    left: 0; /* Distância da esquerda */
+    z-index: 1002; /* Garante que fique acima de outros elementos */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+}
+
+/* Ajustes para o header se houver sobreposição com a logo */
+header .container {
+    position: relative; /* Importante para o posicionamento absoluto do site-title */
+    /* Mantenha o padding-left do container como 0 ou ajuste conforme necessário */
+    padding: 20px 20px 20px 0; 
 }

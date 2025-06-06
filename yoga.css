@@ -102,12 +102,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn-inscreva:hover {
-    background-color: #884EA0; /* Roxo mais claro ao passar o mouse */
-    transform: translateY(-3px); /* Pequeno efeito de elevação */
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-}
-
 /* Estilos Responsivos (para telas menores) */
 @media (max-width: 768px) {
     body {

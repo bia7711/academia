@@ -1,0 +1,164 @@
+/* Estilos Globais para o Corpo da Página (Pilates) */
+body {
+    margin: 0; /* Remove a margem padrão do navegador */
+    padding: 0; /* Remove o padding padrão do navegador */
+    font-family: 'Open Sans', Arial, sans-serif; /* Aplica a fonte a todo o corpo */
+    /* Gradiente suave de verde-água claro para bege */
+    background: linear-gradient(to bottom, #E8F5E9, #F5FBEF); /* Verde pastel suave para um bege cremoso */
+    /* Ou uma cor sólida que combine: background-color: #F8FCF8; */
+    min-height: 100vh; /* Garante que o gradiente cubra toda a altura da tela */
+    display: flex; /* Para centralizar o conteúdo principal verticalmente */
+    justify-content: center; /* Para centralizar o conteúdo principal horizontalmente */
+    align-items: center; /* Para centralizar o conteúdo principal verticalmente */
+    padding: 20px; /* Adiciona um padding geral para evitar que o conteúdo encoste nas bordas */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura total */
+}
+
+/* Estilos para a Seção de Pilates (atualizado para ficar melhor com o body centralizado) */
+.secao-pilates {
+    color: #4A4A4A; /* Cor de texto padrão, um cinza médio */
+    background-color: #ffffff; /* Fundo branco puro para a seção, para se destacar no gradiente */
+    padding: 45px 35px; /* Espaçamento interno generoso */
+    border-radius: 12px; /* Cantos levemente mais arredondados */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada para profundidade */
+    max-width: 950px; /* Largura máxima para centralizar o conteúdo */
+    width: 100%; /* Garante que ocupe a largura disponível */
+    margin: 0; /* Remove margem, pois o body já centraliza */
+    line-height: 1.7; /* Espaçamento entre linhas para melhor leitura */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura total */
+    border: 1px solid #E0E0E0; /* Borda sutil ainda presente */
+}
+
+/* Título Principal da Aula */
+.secao-pilates h1 {
+    text-align: center;
+    color: #5C6F58; /* Um tom de verde-oliva tranquilo */
+    font-size: 3em;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Subtítulos (como "Benefícios", "Estrutura da Aula") */
+.secao-pilates h2 {
+    color: #7B8B77; /* Verde um pouco mais claro */
+    font-size: 2em;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #C8D8C3; /* Linha sutil abaixo do título */
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Informações da Aula (blocos de texto, parágrafos) */
+.info-aula {
+    margin-bottom: 30px;
+}
+
+.info-aula p {
+    margin-bottom: 12px;
+    font-size: 1.15em;
+    color: #5B5B5B;
+}
+
+/* Lista de Itens (O que trazer, Benefícios) */
+.lista-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.lista-info li {
+    background-color: #F8F8F8; /* Fundo levemente mais claro para os itens da lista */
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.1em;
+    color: #666;
+    border-left: 4px solid #A8C4A3; /* Borda lateral sutil */
+}
+
+.lista-info li:last-child {
+    margin-bottom: 0;
+}
+
+/* Ícone para itens da lista */
+.lista-info li::before {
+    content: "✨"; /* Ícone simples */
+    margin-right: 12px;
+    font-size: 1.4em;
+    line-height: 1;
+}
+
+/* Botão de Chamada para Ação (CTA) */
+.btn-agendar {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    background-color: #5C6F58; /* Verde-oliva principal */
+    color: #ffffff;
+    padding: 18px 35px;
+    text-decoration: none;
+    border-radius: 35px;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-agendar:hover {
+    background-color: #7B8B77; /* Verde mais claro ao passar o mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos Responsivos (para telas menores) */
+@media (max-width: 768px) {
+    body {
+        padding: 15px; /* Menos padding em telas menores */
+        align-items: flex-start; /* Não centraliza verticalmente para evitar rolagem excessiva */
+    }
+    .secao-pilates {
+        padding: 30px 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .secao-pilates h1 {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
+
+    .secao-pilates h2 {
+        font-size: 1.8em;
+        margin-top: 35px;
+    }
+
+    .info-aula p, .lista-info li {
+        font-size: 1.05em;
+    }
+
+    .btn-agendar {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .secao-pilates h1 {
+        font-size: 2em;
+    }
+    .secao-pilates h2 {
+        font-size: 1.5em;
+    }
+    .lista-info li {
+        padding: 12px 18px;
+        font-size: 1em;
+    }
+    .lista-info li::before {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+}

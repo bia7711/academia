@@ -14,6 +14,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
+    text-align: center;
 }
 
 h1, h2, h3 {
@@ -118,25 +119,62 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-.hero {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://via.placeholder.com/1920x800/dcdcdc/fff?text=Equilibrio+e+Bem-Estar') no-repeat center center/cover;
-    background-image: url(./img/planodefundo.jpeg);
-    background-size: cover;
-    color: #333;
-    text-align: center;
-    padding: 150px 20px;
-    min-height: 600px;
+/* --- ESTILOS PARA O EFEITO PARALLAX E HERO --- */
+
+/* Classe base para o efeito parallax */
+.parallax {
+    height: 600px; /* Ajuste a altura conforme sua necessidade */
+    min-height: 600px; /* Mantém uma altura mínima */
+    position: relative; 
+    overflow: hidden; 
+
+    /* Propriedades da imagem de fundo para o parallax */
+    background-size: cover;      /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-attachment: fixed; /* O SEGREDO DO PARALLAX: FIXA A IMAGEM! */
+
+    /* Para o alinhamento do conteúdo dentro do parallax */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center; /* Centraliza o texto */
+    padding: 150px 20px; /* Mantém o padding da sua seção hero */
+}
+
+/* Overlay para melhorar a legibilidade do texto sobre a imagem */
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay preto com 50% de opacidade */
+    z-index: 1; /* Garante que o overlay fique abaixo do conteúdo */
+}
+
+/* Garante que o conteúdo dentro da seção parallax fique acima do overlay */
+.parallax .container,
+.parallax h2,
+.parallax p,
+.parallax .btn {
+    position: relative; /* Necessário para o z-index funcionar */
+    z-index: 2; /* Fica acima do overlay */
+}
+
+/* ESTILOS ESPECÍFICOS PARA A SEÇÃO HERO (que agora também é parallax) */
+.hero.parallax {
+    background-image: url(./img/fundo_academia.webp); /* Caminho da sua imagem de fundo do hero */
+    color: #fff; /* Cor do texto branco para contrastar com o fundo */
 }
 
 .hero h2 {
     font-size: 4.5em;
     margin-bottom: 25px;
-    color: #ffffff;
-    text-shadow: none; /* Remove sombra para clean look */
+    color: #ffffff; /* Garante que o H2 seja branco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra para melhor contraste */
     animation: fadeIn 1.2s ease-out;
 }
 
@@ -144,7 +182,8 @@ nav ul li a:hover::after {
     font-size: 1.6em;
     margin-bottom: 50px;
     max-width: 900px;
-    color: #ffffff;
+    color: #ffffff; /* Garante que o parágrafo seja branco */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra suave para o parágrafo */
     animation: fadeIn 1.2s ease-out 0.3s forwards;
     opacity: 0;
 }
